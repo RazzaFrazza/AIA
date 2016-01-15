@@ -41,18 +41,24 @@ $('document').ready(function(){
 		$(this).children('.overlay').removeClass('flipOutX').show().addClass('flipInX');
 	});
 
+
+
+
+
+
 	$('.history-container .history, .history-menu-link').click(function(e){
 
 		//$('body').addClass('fixed');
 
 		$('.history-overlay').removeClass('slideOutDown').show().addClass('slideInUp');
+
 		setTimeout(function(){
 
 			//overlay top is cutoff after first time.  this scrolls to the top when the overlay is brought in.
 
-	        $('#history-overlay-container').animate({
-	          scrollTop: 0
-	        }, 800);
+	        // $('#history-overlay-container').animate({
+	        //   scrollTop: 0
+	        // }, 800);
 
 		}, 300);
 	});
@@ -60,7 +66,7 @@ $('document').ready(function(){
 	$('.history-overlay .history, .close-button').click(function(){
 		
 		//$('body').removeClass('fixed');
-
+		// $('.inner-wrap').css('display', 'block');
 		$('.history-overlay').removeClass('slideInUp').addClass('slideOutDown').fadeOut();
 
         $('html,body').animate({
@@ -68,6 +74,28 @@ $('document').ready(function(){
         }, 1000);
 
 	});
+
+
+
+	$('#openMe, .small-circle-button').click(function(e){
+		$('#what-are-aia-contract-documents').css('display', 'none');
+		$('#history-menu-link-history').css('display', 'none')
+	});	
+
+
+	$('#closeMe, .close-button').click(function(e){
+		$('#what-are-aia-contract-documents').css('display', 'block');
+	});
+
+
+	$('.history-menu-link').click(function(e){
+		$('#history-overlay-container').css('display', 'none');
+		$('#what-are-aia-contract-documents').css('display', 'block');
+	});	
+
+
+
+
 
 	var dashedLine = $('.dashed'),
 	tl;

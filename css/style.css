@@ -395,8 +395,8 @@ h2{
 }
 .second svg{
     max-width: 100%; /* the SVG scaling is achieved via parent container scaling*/
-    height: 100%;
-    /*min-height: 560px;*/
+/*    height: 100%;
+*/    /*min-height: 560px;*/
 	margin: 0 auto;
 
     background-color: #A0BCC0; /*fill the SVG's bg with color preventing doubling white blots*/
@@ -1569,3 +1569,24 @@ svg.small-circle-button:hover .small-circle{
     fill: #E12426;
 }
 /* END OF: animate city building SVG*/
+
+
+/* Mygel */
+.history-overlay {
+	height: 1100px;
+	overflow-y: inherit;
+/*	position: inherit;
+*/}
+
+#history-overlay-container {
+	z-index: 22;
+	position: relative;
+}
+
+.hideHistory {
+	display: none;
+}
+
+.dispayHistory {
+	display: block;
+}
