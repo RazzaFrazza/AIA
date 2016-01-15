@@ -73,6 +73,7 @@ $('document').ready(function(){
 	tl;
 
 	// START OF: animation city building when once in the viewport =====
+
 	var animateCity = {
 		DOM: {
 			$svgBox: $('.js-city-building-block')
@@ -89,6 +90,8 @@ $('document').ready(function(){
 			});
 		}
 	};
+
 	animateCity.bind();
+
 	// ===== END OF: animation city building when once in the viewport
 });

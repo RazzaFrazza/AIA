@@ -393,9 +393,8 @@ h2{
     background: url(../img/second-bg.png) repeat-x; /*the overlaying bg over the SVG*/
     background-size: cover;
 }
-.second svg{
+.second svg {
     max-width: 100%; /* the SVG scaling is achieved via parent container scaling*/
-    height: 100%;
     /*min-height: 560px;*/
 	margin: 0 auto;
 
@@ -1569,3 +1568,9 @@ svg.small-circle-button:hover .small-circle{
     fill: #E12426;
 }
 /* END OF: animate city building SVG*/
+
+/* New CSS 2 */
+
+.logo {
+	text-align: center;
+}
