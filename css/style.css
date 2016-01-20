@@ -396,8 +396,8 @@ h2{
 .second svg {
     max-width: 100%; /* the SVG scaling is achieved via parent container scaling*/
 
-/*    height: 100%;
-*/    /*min-height: 560px;*/
+   height: 100%;
+   /*min-height: 560px;*/
 	margin: 0 auto;
 
     background-color: #A0BCC0; /*fill the SVG's bg with color preventing doubling white blots*/
@@ -515,6 +515,7 @@ svg.small-circle-button:hover .small-circle{
 .who-uses h2{
 	color: #fff;
 	margin-bottom: 80px;
+	margin-top: 0px !important;
 }
 
 .who-uses img{
@@ -607,6 +608,8 @@ svg.small-circle-button:hover .small-circle{
 .contract-families h2{
 	padding: 0 70px;
 	margin-bottom: 50px;
+	margin-top: 0px !important;
+	line-height: 46px;
 }
 
 .contract-families .flip-container, .contract-families .flip-container .front, .contract-families .flip-container .back{
@@ -736,9 +739,11 @@ svg.small-circle-button:hover .small-circle{
 }
 
 .popular-documents h2{
+	margin-top: 0px !important;
 	padding: 0 70px;
 	color: #fff;
 	text-align: center;
+
 }
 
 .popular-documents .columns{
@@ -870,6 +875,7 @@ svg.small-circle-button:hover .small-circle{
   display: block;
   margin-top: 14px;
   text-transform: uppercase;
+  line-height: 22px;
 }
 
 .footer {
@@ -883,6 +889,7 @@ svg.small-circle-button:hover .small-circle{
 .footer h2{
 	color: #000;
 	text-align: center;
+	font-size: 40px;
 }
 
 
