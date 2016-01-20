@@ -62,13 +62,11 @@ $('document').ready(function(){
 
 	$('.history-overlay .history, .close-button, .about').click(function(){
 		
-		//$('body').removeClass('fixed');
-		// $('.inner-wrap').css('display', 'block');
+		$('body').removeClass('fixed');
+		$('.inner-wrap').css('display', 'block');
 		$('.history-overlay').removeClass('slideInUp').addClass('slideOutDown').fadeOut();
 
-        $('html,body').animate({
-          scrollTop: $('#what-are-aia-contract-documents').offset().top
-        }, 1000);
+
 
 	});
 
@@ -80,7 +78,7 @@ $('document').ready(function(){
 	});	
 
 
-	$('#closeMe, .close-button').click(function(e){
+	$('#closeMe, .close-button, .small-circle').click(function(e){
 		$('#what-are-aia-contract-documents').css('display', 'block');
 	});
 
