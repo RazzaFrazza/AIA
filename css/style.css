@@ -1,0 +1,1605 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Begin Styles */
+
+@font-face {
+    font-family: 'architypebold';
+    src: url('../fonts/architype-bold-webfont.eot');
+    src: url('../fonts/architype-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/architype-bold-webfont.woff2') format('woff2'),
+         url('../fonts/architype-bold-webfont.woff') format('woff'),
+         url('../fonts/architype-bold-webfont.ttf') format('truetype'),
+         url('../fonts/architype-bold-webfont.svg#architypebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'architypelight';
+    src: url('../fonts/architype-light-webfont.eot');
+    src: url('../fonts/architype-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/architype-light-webfont.woff2') format('woff2'),
+         url('../fonts/architype-light-webfont.woff') format('woff'),
+         url('../fonts/architype-light-webfont.ttf') format('truetype'),
+         url('../fonts/architype-light-webfont.svg#architypelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,body{
+	position: relative;
+
+}
+
+body{
+	font-family: 'architypelight', sans-serif;
+}
+
+body.fixed{
+	overflow: hidden;
+}
+
+		/* simple */
+		.flip-container {
+			-webkit-perspective: 1000;
+			-moz-perspective: 1000;
+			-ms-perspective: 1000;
+			perspective: 1000;
+
+			-ms-transform: perspective(1000px);
+			-moz-transform: perspective(1000px);
+    			-moz-transform-style: preserve-3d; 
+    			-ms-transform-style: preserve-3d; 
+		}
+
+			/*
+			.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				filter: FlipH;
+    			-ms-filter: "FlipH";
+			}
+			*/
+
+
+			/* START: Accommodating for IE */
+.flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+		
+		/* END: Accommodating for IE */
+
+		.flip-container, .front, .back {
+			width: 100%;
+			height: 588px;
+		}
+
+		.flipper {
+			-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+			-ms-transition: 0.6s;
+
+			-moz-transition: 0.6s;
+			-moz-transform: perspective(1000px);
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+		}
+
+		.front, .back {
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
+
+		    -webkit-transition: 0.6s;
+		    -webkit-transform-style: preserve-3d;
+		    -webkit-transform: rotateY(0deg);
+
+		    -moz-transition: 0.6s;
+		    -moz-transform-style: preserve-3d;
+		    -moz-transform: rotateY(0deg);
+
+		    -o-transition: 0.6s;
+		    -o-transform-style: preserve-3d;
+		    -o-transform: rotateY(0deg);
+
+		    -ms-transition: 0.6s;
+		    -ms-transform-style: preserve-3d;
+		    -ms-transform: rotateY(0deg);
+
+		    transition: 0.6s;
+		    transform-style: preserve-3d;
+		    transform: rotateY(0deg);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.front {
+			-webkit-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			z-index: 2;
+		}
+
+		.back {
+			background: #fff;
+			-webkit-transform: rotateY(-180deg);
+		    -moz-transform: rotateY(-180deg);
+		    -o-transform: rotateY(-180deg);
+		    -ms-transform: rotateY(-180deg);
+		    transform: rotateY(-180deg);
+		}
+
+.front > a{
+	display: block;
+}
+
+.oh{
+	overflow: hidden;
+}
+
+a{
+	text-decoration: none;
+	color: #e12426;
+	text-transform: uppercase;
+	font-family: 'architypebold', sans-serif;
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.inner-wrap{
+	max-width: 1166px;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+.top{
+	text-align: center;
+	padding: 70px 0 130px;
+}
+
+
+#home{
+	background: url(../img/top.png) no-repeat;
+	background-size: cover;
+}
+
+h1{
+	font-size: 24px;
+	color: #e12426;
+	font-family: 'architypebold', sans-serif;
+	padding-bottom: 49px;
+}
+
+h2{
+	font-size: 20px;
+	color: #e12426;
+	font-family: 'architypebold', sans-serif;
+}
+
+.logo{
+	width: 227px;
+	margin: 0 auto;
+}
+
+.nav-wrap {
+  left: 0px;
+  position: fixed;
+  top: 150px;
+  z-index: 10000;
+  display: none;
+}
+
+.nav li{
+	margin-bottom: 28px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.nav li.home{
+	margin-bottom: 13px;
+	padding-left: 0;
+}
+
+.link {
+  border-radius: 16px;
+  position: relative;
+  top: -1px;
+  transition: opacity 0.25s ease-in-out 0s;
+}
+
+.nav .link{
+	padding: 0 18px 0 44px;
+	background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
+	display: none;
+	left: -25px;
+}
+
+.home .link {
+  left: -22px;
+  position: relative;
+  top: -13px;
+  padding-left: 26px;
+}
+
+.nav .home svg{
+	border: 2px solid #6e7e7f;
+	border-radius: 50%;
+	padding: 7px;
+}
+
+.nav svg.dot {
+  background: #fff none repeat scroll 0 0;
+  height: 26px;
+  margin-right: 0;
+  width: 26px;
+}
+
+.nav li:hover svg.dot{
+	background: #fff;
+}
+
+.nav li:hover .border{
+	opacity: 1;
+}
+
+.nav li.home:hover .home-button{
+	fill: #000;
+}
+
+.home-button{
+	fill: #e12426;
+}
+
+.nav .dot{
+	width: 14px;
+	height: 14px;
+	background: #e12426;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	z-index: 1000;
+}
+
+.nav li:hover .dot{
+	background: #000;
+}
+
+.nav .border {
+  border: 1px solid #6e7e7f;
+  border-radius: 50%;
+  display: inline-block;
+  height: 24px;
+  left: 9px;
+  opacity: 1;
+  position: absolute;
+  top: -6px;
+  width: 24px;
+  background: #fff;
+}
+
+.nav li a:hover .link, .nav li a:focus .link{
+	visibility: visible;
+	opacity: 1;
+	display: inline;
+}
+
+.nav a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #e12426;
+	font-family: 'architypebold', sans-serif;
+	font-size: 14px;
+}
+
+.second{
+	text-align: center;
+    /*background: url(../img/second-bg.svg) repeat-x;*/
+	background: url(../img/second-bg.png) repeat-x #A0BCC0;/*the bg for the SVG section*/
+	padding: 30px 0 45px;
+
+    background-size: cover;
+}
+.building_city_svg_box{
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+.bg_white_blots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    margin: auto;
+
+    background: url(../img/second-bg.png) repeat-x; /*the overlaying bg over the SVG*/
+    background-size: cover;
+}
+.second svg {
+    max-width: 100%; /* the SVG scaling is achieved via parent container scaling*/
+
+/*    height: 100%;
+*/    /*min-height: 560px;*/
+	margin: 0 auto;
+
+    background-color: #A0BCC0; /*fill the SVG's bg with color preventing doubling white blots*/
+}
+
+.what{
+	padding: 60px 0 20px;
+}
+
+.history-overlay .what{
+	padding: 60px 10px 20px;
+}
+
+.what h2{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.what p{
+	font-size: 18px;
+	line-height: 26px;
+	margin-bottom: 20px;
+	padding: 0 3%;
+}
+
+.what img {
+  display: block;
+  margin: 40px auto;
+  max-width: 45%;
+}
+
+.history-overlay {
+  background: #fff none repeat scroll 0 0;
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.history-container{
+	overflow: hidden;
+}
+
+.history-overlay .history{
+	display: block;
+	text-align: center;
+}
+
+.close-wrap {
+  background: #e12426 none repeat scroll 0 0;
+  border-radius: 50%;
+  height: 28px;
+  margin: 0 auto;
+  position: relative;
+  top: 1px;
+  width: 28px;
+}
+
+.close-inner-wrap{
+
+}
+
+.close.close-button svg line, .close.close-button svg circle {
+  stroke: #e12426;
+}
+
+.close.close-button {
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 17px;
+}
+
+.center{
+	text-align: center;
+}
+
+a.history svg{
+	margin-right: 15px;
+}
+
+a.history:hover .small-circle-button .small-circle{
+	fill: #000;
+}
+
+a.history .link{
+	position: relative;
+	top: -10px;
+	opacity: 1;
+	visibility: visible;
+	font-size: 14px;
+}
+
+svg.small-circle-button .small-circle{
+	fill: #e12426;
+}
+
+svg.small-circle-button:hover .small-circle{
+	fill: #000;
+}
+
+.who-uses{
+	text-align: center;
+	padding: 20px 0;
+	background: url(../img/who-uses-bg.png);
+	overflow: hidden;
+}
+
+.who-uses h2{
+	color: #fff;
+	margin-bottom: 80px;
+}
+
+.who-uses img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.who-uses .small-circle-button{
+	margin-right: 15px;
+}
+
+.who-uses a .link{
+	opacity: 1;
+	visibility: visible;
+	color: #fff;
+	position: relative;
+	top: -8px;
+	font-size: 18px;
+}
+
+.who-uses .two-column:hover svg.small-circle-button .small-circle{
+	fill: #000;
+}
+
+.who-uses .two-column{
+	padding-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+
+.row{
+	display: block;
+}
+
+.two-column{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.two-column.owners{
+	padding-top: 116px;
+}
+
+.two-column.owners img{
+	position: relative;
+}
+
+.two-column.owners .front a {
+  position: relative;
+  top: 116px;
+}
+
+.who-uses .row{
+	margin-bottom: 150px;
+}
+
+.who-uses .row:last-child{
+	margin-bottom: 0;
+}
+
+.contract-families{
+	padding: 20px 0;
+	text-align: center;
+}
+
+.contract-families .overlay{
+	padding: 20px;
+}
+
+.contract-families .overlay h3{
+	font-size: 15px;
+	line-height: normal;
+	max-width: 150px;
+}
+
+.contract-families .overlay.flippy > p {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.contract-families .inner-wrap{
+	max-width: 1090px;
+	overflow: hidden;
+}
+
+.contract-families h2{
+	padding: 0 70px;
+	margin-bottom: 50px;
+}
+
+.contract-families .flip-container, .contract-families .flip-container .front, .contract-families .flip-container .back{
+	height: 300px;
+	width: 100%;
+}
+
+.contract-families .two-col{
+	width: 300px;
+	height: auto;
+	background-size: cover;
+	cursor: pointer;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.contract-families .two-col:hover .small-circle-button .small-circle{
+	fill: #000;
+}
+
+.two-col.design-build{
+	background-image: url(../img/design-build.jpg);
+	background-position: 0 0;
+}
+
+.two-col.design-build:hover{
+	background-position: -300px 1px;
+}
+
+.two-col.design-bid-build{
+	background-image: url(../img/design-bid-build.jpg);
+	background-position: 0 0;
+}
+
+.two-col.design-bid-build:hover{
+	background-position: -300px 0;
+}
+
+.two-col.construction-manager-as-contractor{
+	background-image: url(../img/construction-manager-as-contractor.jpg);
+	background-position: 0 0;
+}
+
+.two-col.construction-manager-as-contractor:hover{
+	background-position: -300px 0;
+}
+
+.two-col.construction-manager-as-advisor{
+	background-image: url(../img/construction-manager-as-advisor.jpg);
+	background-position: 0 0;
+}
+
+.two-col.construction-manager-as-advisor:hover{
+	background-position: -300px 0;
+}
+
+.two-col.integrated-project-delivery{
+	background-image: url(../img/integrated-project-delivery.jpg);
+	background-position: 0 0;
+}
+
+.two-col.integrated-project-delivery:hover{
+	background-position: -300px 0;
+}
+
+.two-col.other-project-types{
+	background-image: url(../img/other-project-types.jpg);
+	background-position: 0 0;
+}
+
+.two-col.other-project-types:hover{
+	background-position: -300px 0;
+}
+
+.contract-families .two-col a{
+	position: absolute;
+	bottom: 14px;
+	left: 0;
+	width: 100%;
+}
+
+.contract-families .link{
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	top: -10px;
+	font-size: 14px;
+	max-width: 200px;
+}
+
+.contract-families .link.two-lines{
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	top: 4px;
+	max-width: 214px;
+	display: inline-block;
+}
+
+.contract-families .link.two-lines.special{
+	max-width: 238px;
+}
+
+.contract-families .link.two-lines.wider{
+	max-width: 250px;
+}
+
+.animation-section{
+	padding: 40px 0;
+	text-align: center;
+	background: url(../img/animation-bg.jpg) no-repeat top center #a3bcc0;
+}
+
+.animation-section img{
+	max-width: 100%;
+}
+
+.popular-documents{
+	background: url(../img/who-uses-bg.png);
+	padding: 20px 0;
+}
+
+.popular-documents .inner-wrap{
+	max-width: 1090px;
+	overflow: hidden;
+}
+
+.popular-documents h2{
+	padding: 0 70px;
+	color: #fff;
+	text-align: center;
+}
+
+.popular-documents .columns{
+	text-align: center;
+}
+
+.popular-documents .two-col{
+	width: 300px;
+	height: 735px;
+	cursor: pointer;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.popular-documents .front{
+	padding-top: 43px;
+}
+
+.popular-documents .two-col:hover .front{
+	padding-top: 30px;
+}
+
+
+.popular-documents .two-col .graphic{
+	background-size: cover;
+	background-position: 0 0;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+.popular-documents .two-col:hover .small-circle-button .small-circle{
+	fill: #000;
+}
+
+.two-col.standard-owner .graphic{
+	background-image: url(../img/standard-owner.png);
+}
+
+.two-col.standard-owner:hover .graphic{
+	background-position: -300px 0;
+}
+
+.two-col.application .graphic{
+	background-image: url(../img/application.png);
+	background-position: 0 0;
+}
+
+.two-col.application:hover .graphic{
+	background-position: -300px 0;
+}
+
+.two-col.contractor-subcontractor .graphic{
+	background-image: url(../img/contractor-subcontractor.png);
+	background-position: 0 0;
+}
+
+.two-col.contractor-subcontractor:hover .graphic{
+	background-position: -300px 0;
+}
+
+.two-col.continuation-sheet .graphic{
+	background-image: url(../img/continuation-sheet.png);
+	background-position: 0 0;
+}
+
+.two-col.continuation-sheet:hover .graphic{
+	background-position: -300px 0;
+}
+
+.popular-documents .two-col.contract-for-construction{
+	float: none;
+	margin: 0 auto;
+	clear: both;
+}
+
+.two-col.contract-for-construction .graphic{
+	background-image: url(../img/contract-for-construction.png);
+	background-position: 0 0;
+}
+
+.two-col.contract-for-construction:hover .graphic{
+	background-position: -300px 0;
+}
+
+.popular-documents .two-col a{
+	position: absolute;
+	bottom: 174px;
+	left: 0;
+	width: 100%;
+}
+
+.popular-documents .overlay.flippy {
+  background: #fff none repeat scroll 0 0;
+}
+
+.popular-documents .small-circle-button{
+	margin-right: 15px;
+}
+
+.popular-documents .link{
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	top: -8px;
+	font-size: 18px;
+	max-width: 200px;
+	color: #fff;
+}
+
+.popular-documents .link.two-lines{
+	opacity: 1;
+	visibility: visible;
+	position: relative;
+	top: 5px;
+	font-size: 18px;
+	max-width: 250px;
+	display: inline-block;
+}
+
+.popular-documents .link.two-lines.wider{
+	max-width: 280px;
+}
+
+.popular-documents .link .second-line {
+  display: block;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-image: url("../img/footer-bg.jpg");
+  background-position: 0 -1px;
+  background-size: cover;
+  overflow: hidden;
+  padding: 60px 0 100px;
+}
+
+.footer h2{
+	color: #000;
+	text-align: center;
+}
+
+
+.footer a{
+	color: #000;
+	font-size: 18px;
+}
+.footer .inner-wrap{
+	max-width: 1190px;
+	margin: 0 auto;
+}
+
+.footer .two-col{
+	width: 100%;
+	cursor: pointer;
+	margin-bottom: 20px;
+	position: relative;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.footer .two-col .button{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto 30px;
+}
+
+.footer .button{
+	position: relative;
+}
+
+.footer .button a{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 50%;
+}
+
+.footer .button.products{
+	background-image: url(../img/footer-products.png);
+	background-size: cover;
+}
+
+.footer .button.tools{
+	background-image: url(../img/footer-tools.png);
+	background-size: cover;
+}
+
+.footer .two-col:hover .button{
+	background-position: -100px 0;
+}
+
+.footer .text{
+	font-size: 22px;
+	font-family: 'architypebold', sans-serif;
+	color: #000;
+}
+
+.overlay{
+	color: #000;
+	font-size: 12px;
+	text-align: left;
+	padding: 40px;
+	line-height: normal;
+
+}
+
+.overlay:not(.flippy){
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+}
+
+.overlay.hidden{
+	display: none;
+}
+
+.contract-families .back{
+	background: #cddfe0;
+}
+
+.overlay h3{
+	color: #000;
+	font-size: 22px;
+	text-transform: none;
+	font-family: 'architypebold', sans-serif;
+	margin: 20px 0 6px;
+}
+
+.overlay .close{
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	cursor: pointer;
+}
+
+.overlay .close svg line, .overlay .close svg circle{
+	stroke: #e12426;
+}
+
+.overlay .close:hover svg line, .overlay .close:hover svg circle{
+	stroke: #000;
+}
+
+.two-col .overlay a{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	text-transform: none;
+	font-family: 'architypelight', sans-serif;
+	margin-top: 30px;
+	display: block;
+}
+
+.popular-documents .two-col .overlay{
+	padding: 37px;
+}
+
+.popular-documents .two-col .overlay a{
+	position: static;
+}
+
+.popular-documents .two-col:hover .overlay .close{
+	right: 27px;
+	top: 27px;
+}
+
+
+@media only screen and (min-width: 767px){
+	.top{
+		padding: 190px 0 384px;
+	}
+
+	.close.close-button {
+	  right: 60px;
+	  top: 60px;
+	}
+
+	.nav .border {
+	  top: -4px;
+	}
+
+	.overlay{
+		color: #000;
+		font-size: 14px;
+		text-align: left;
+		padding: 40px;
+		line-height: 26px;
+
+	}
+
+	h1{
+		font-size: 40px;
+	}
+
+	.second img{
+		position: relative;
+		left: 20px;
+		max-width: 100%;
+	}
+
+	.what h2 {
+	  margin-bottom: 40px;
+	  text-align: center;
+	}
+
+	h2 {
+	  color: #e12426;
+	  font-family: "architypebold",sans-serif;
+	  font-size: 40px;
+	}
+
+	.what {
+	  padding: 90px 7% 20px;
+	}
+
+	.history-overlay .what{
+		padding: 90px 10% 20px;
+	}
+
+	.what p {
+	  font-size: 30px;
+	  line-height: 45px;
+	  margin-bottom: 50px;
+	}
+
+	a.history .link {
+	  font-size: 18px;
+	  background: none;
+	}
+
+	.what p{
+		padding: 0;
+	}
+
+	.who-uses {
+	  padding: 90px 0 100px;
+	}
+
+	.two-column {
+	  display: inline-block;
+	  margin-bottom: 150px;
+	  margin-right: 2%;
+	  width: 300px;
+	}
+
+	.two-column.owners, .two-column.attorneys {
+	  margin-right: 0;
+	}
+
+	.flip-container, .front, .back {
+		width: 100%;
+		height: 496px;
+	}
+
+	.popular-documents .flip-container, .popular-documents .flip-container .front, .popular-documents .flip-container .back {
+		width: 100%;
+		height: 510px;
+	}
+
+	.popular-documents{
+		padding: 80px 0;
+	}
+
+	.popular-documents h2{
+		margin-bottom: 115px;
+	}
+
+	.popular-documents .two-col{
+		width: 350px;
+		height: 510px;
+		float: none;
+		margin: 0 15px 50px 0;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+
+	.popular-documents .two-col.last{
+		margin-right: 0;
+	}
+
+	.popular-documents .two-col:hover{
+		border: 3px solid #fff;
+	}
+
+	.popular-documents .two-col a{
+		position: absolute;
+		bottom: 93px;
+		left: 0;
+		width: 100%;
+	}
+
+
+	.footer .two-col{
+		width: 49%;
+		float: left;
+		margin: 0 1% 96px 0;
+		padding-top: 43px;
+	}
+
+	.footer h2{
+		color: #000;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+
+	.footer .two-col .button{
+		width: 173px;
+		height: 173px;
+		margin: 0 auto 30px;
+	}
+
+	.footer .two-col:hover .button{
+		background-position: -173px 0;
+	}
+
+	.nav-wrap {
+	  left: 10px;
+	  position: fixed;
+	  top: 200px;
+	  display: block;
+	}
+
+	.nav a{
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: 'architypebold', sans-serif;
+		font-size: 20px;
+	}
+
+	.two-column.attorneys {
+	  top: -2px;
+	}
+
+	.popular-documents .link.two-lines {
+	  display: block;
+	  max-width: none;
+	  text-align: center;
+	  width: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 830px){
+
+#home{
+	background: url(../img/top.png) no-repeat fixed top center / cover;
+}
+
+.contract-families {
+	  padding: 80px 0;
+	}
+
+	.contract-families .two-col {
+	  background-size: cover;
+	  float: none;
+	  height: 350px;
+	  margin: 0 20px 20px 0;
+	  width: 350px;
+	  display: inline-block;
+	}
+
+	.contract-families .flip-container, .contract-families .flip-container .front,  .contract-families .flip-container .back{
+		height: 350px;
+		width: 100%;
+	}
+
+	.two-col.design-build:hover{
+		background-position: -350px 1px;
+	}
+
+
+	.two-col.design-bid-build:hover{
+		background-position: -350px 0;
+	}
+
+	.two-col.construction-manager-as-contractor:hover{
+		background-position: -350px 0;
+	}
+
+	.two-col.construction-manager-as-advisor:hover{
+		background-position: -350px 0;
+	}
+
+	.two-col.integrated-project-delivery:hover{
+		background-position: -350px 0;
+	}
+
+
+	.two-col.other-project-types:hover{
+		background-position: -350px 0;
+	}
+
+	.contract-families .two-col.last{
+		margin-right: 0;
+	}
+
+	.contract-families .overlay{
+		padding: 40px;
+	}
+
+	.contract-families .link{
+		top: -10px;
+	}
+
+}
+
+@media only screen and (min-width: 1160px){
+
+		.who-uses .two-column:hover{
+			border-bottom: 4px solid #fff;
+			padding-bottom: 16px;
+		}
+
+		.popular-documents .two-col{
+			width: 496px;
+			height: 510px;
+			float: left;
+			margin: 0 96px 96px 0;
+			box-sizing: border-box;
+		}
+
+		.popular-documents .two-col:hover{
+			border: 3px solid #fff;
+		}
+
+		.popular-documents .two-col a{
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+
+}
+
+@media only screen and (min-width: 1200px){
+	h1{
+		font-size: 66px;
+	}
+
+	.two-column {
+	  margin-bottom: 150px;
+	  margin-right: 4%;
+	  width: 46%;
+	}
+
+	.overlay{
+		color: #000;
+		font-size: 17px;
+		text-align: left;
+		padding: 40px;
+		line-height: 30px;
+
+	}
+
+	.contract-families .two-col{
+		  background-size: cover;
+		  float: left;
+		  height: 496px;
+		  margin: 0 96px 96px 0;
+		  width: 496px;
+		}
+
+	.contract-families .two-col{
+		  background-size: cover;
+		  float: left;
+		  height: 496px;
+		  margin: 0 96px 96px 0;
+		  width: 496px;
+	}
+
+	.contract-families .flip-container, .contract-families .flip-container .front,  .contract-families .flip-container .back{
+		height: 497px;
+		width: 100%;
+	}
+
+	.two-col.design-build:hover{
+		background-position: -496px 1px;
+	}
+
+
+	.two-col.design-bid-build:hover{
+		background-position: -496px 0;
+	}
+
+	.two-col.construction-manager-as-contractor:hover{
+		background-position: -496px 0;
+	}
+
+	.two-col.construction-manager-as-advisor:hover{
+		background-position: -496px 0;
+	}
+
+	.two-col.integrated-project-delivery:hover{
+		background-position: -496px 0;
+	}
+
+
+	.two-col.other-project-types:hover{
+		background-position: -496px 0;
+	}
+
+	.contract-families .two-col.last{
+		margin-right: 0;
+	}
+
+	.contract-families .overlay{
+		padding: 40px;
+	}
+
+	.contract-families .overlay.flippy > p {
+		  font-size: 17px;
+		  line-height: 30px;
+		}
+
+		.contract-families .overlay h3{
+			font-size: 22px;
+			line-height: 30px;
+			max-width: none;
+		}
+
+		.contract-families .two-col a{
+			bottom: 45px;
+		}
+
+		.contract-families .two-col .overlay a{
+			bottom: 0;
+		}
+
+		.contract-families .link{
+			opacity: 1;
+			visibility: visible;
+			position: relative;
+			top: -8px;
+			font-size: 18px;
+			max-width: 200px;
+		}
+
+		.contract-families .small-circle-button{
+			margin-right: 15px;
+		}
+
+		.contract-families .link.two-lines{
+			top: -7px;
+			max-width: none;
+		}
+
+		.contract-families .link.two-lines.special {
+		  max-width: none;
+		}
+
+		.contract-families .link.two-lines.wider{
+			max-width: none;
+		}
+}
+/* START OF: animate city building SVG*/
+/* add a special .animation-draw-city-build-shapes to the  <body> tag once the SVG is in the viewport */
+    /*the dashed lines has a colored NOT-dashed line over it. remove that overlay*/
+#overlay_line_left{
+    stroke-dasharray: 184.01092529296875;
+    stroke-dashoffset: 0;
+
+    -webkit-transition: all .5s ease;
+
+    transition: all .5s ease;
+}
+.animation-draw-city-build-shapes #overlay_line_left{
+    stroke-dashoffset: 184.01092529296875;
+}
+
+#overlay_line_top{
+    stroke-dasharray: 570.4271850585938;
+    stroke-dashoffset: 0;
+
+    -webkit-transition: all 1s .5s ease;
+
+    transition: all 1s .5s ease;
+}
+.animation-draw-city-build-shapes #overlay_line_top{
+    stroke-dashoffset: 570.4271850585938;
+}
+#overlay_line_right{
+    stroke-dasharray: 103.23009490966797;
+    stroke-dashoffset: 0;
+
+    -webkit-transition: stroke-dashoffset .3s 1.5s ease;
+
+    transition: stroke-dashoffset .3s 1.5s ease;
+}
+.animation-draw-city-build-shapes #overlay_line_right{
+    stroke-dashoffset: 103.23009490966797;
+}
+
+#overlay_line_bot_2{
+    stroke-dasharray: 269.3218994140625;
+    stroke-dashoffset: 0;
+
+    -webkit-transition: all .5s 2.7s ease;
+
+    transition: all .5s 2.7s ease;
+}
+.animation-draw-city-build-shapes #overlay_line_bot_2{
+    stroke-dashoffset: 269.3218994140625;
+}
+
+#red_mark_top_circle, #red_mark_mid_circle, #red_mark_bot_circle{
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    /*Firefox can't into transform-origin: center; for SVG shapes. Manual values are added below.*/
+    /*-webkit-transform-origin: center;*/
+    /*transform-origin: center;*/
+    opacity: 0;
+}
+#red_mark_top_circle{
+    -webkit-transition: -webkit-transform .4s 2.7s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: -webkit-transform .4s 2.7s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.7s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.7s cubic-bezier(0.25, 0.1, 0.59, 1.68), -webkit-transform .4s 2.7s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    /*Firefox can't into transform-origin: center; for SVG shapes. Manual value.*/
+    -webkit-transform-origin: 414px 380px;
+    transform-origin: 414px 380px;
+}
+#red_mark_mid_circle{
+    -webkit-transition: -webkit-transform .4s 2.8s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: -webkit-transform .4s 2.8s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.8s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.8s cubic-bezier(0.25, 0.1, 0.59, 1.68), -webkit-transform .4s 2.8s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    /*Firefox can't into transform-origin: center; for SVG shapes. Manual value.*/
+    -webkit-transform-origin: 414px 491px;
+    transform-origin: 414px 491px;
+}
+#red_mark_bot_circle{
+    -webkit-transition: -webkit-transform .4s 2.9s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: -webkit-transform .4s 2.9s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.9s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    transition: transform .4s 2.9s cubic-bezier(0.25, 0.1, 0.59, 1.68), -webkit-transform .4s 2.9s cubic-bezier(0.25, 0.1, 0.59, 1.68);
+    /*Firefox can't into transform-origin: center; for SVG shapes. Manual value.*/
+    -webkit-transform-origin: 414px 601px;
+    transform-origin: 414px 601px;
+}
+.animation-draw-city-build-shapes #red_mark_top_circle, .animation-draw-city-build-shapes #red_mark_mid_circle, .animation-draw-city-build-shapes #red_mark_bot_circle{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+#windows rect{
+    fill: #A0BCC0;
+
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+#windows #Clipped:nth-child(1) rect{
+    -webkit-transition-delay: 1.8s;
+    transition-delay: 1.8s;
+}
+#windows #Clipped:nth-child(2) rect{
+    -webkit-transition-delay: 1.9s;
+    transition-delay: 1.9s;
+}
+#windows #Clipped:nth-child(3) rect{
+    -webkit-transition-delay: 1.8s;
+    transition-delay: 1.8s;
+}
+#windows #Clipped:nth-child(4) rect{
+    -webkit-transition-delay: 1.85s;
+    transition-delay: 1.85s;
+}
+
+#windows #Clipped:nth-child(5) rect{
+    -webkit-transition-delay: 1.9s;
+    transition-delay: 1.9s;
+}
+#windows #Clipped:nth-child(6) rect{
+    -webkit-transition-delay: 2.2s;
+    transition-delay: 2.2s;
+}
+#windows #Clipped:nth-child(7) rect{
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+#windows #Clipped:nth-child(8) rect{
+    -webkit-transition-delay: 2.1s;
+    transition-delay: 2.1s;
+}
+
+#windows #Clipped:nth-child(9) rect{
+    -webkit-transition-delay: 2.25s;
+    transition-delay: 2.25s;
+}
+#windows #Clipped:nth-child(10) rect{
+    -webkit-transition-delay: 2.15s;
+    transition-delay: 2.15s;
+}
+#windows #Clipped:nth-child(11) rect{
+    -webkit-transition-delay: 2.3s;
+    transition-delay: 2.3s;
+}
+#windows #Clipped:nth-child(12) rect{
+    -webkit-transition-delay: 2.2s;
+    transition-delay: 2.2s;
+}
+
+#windows #Clipped:nth-child(13) rect{
+    -webkit-transition-delay: 2.35s;
+    transition-delay: 2.35s;
+}
+#windows #Clipped:nth-child(14) rect{
+    -webkit-transition-delay: 2.4s;
+    transition-delay: 2.4s;
+}
+#windows #Clipped:nth-child(15) rect{
+    -webkit-transition-delay: 2.47s;
+    transition-delay: 2.47s;
+}
+#windows #Clipped:nth-child(16) rect{
+    -webkit-transition-delay: 2.5s;
+    transition-delay: 2.5s;
+}
+.animation-draw-city-build-shapes #windows rect{
+    fill: #E12426;
+}
+/* END OF: animate city building SVG*/
+
+/* New CSS 2 */
+
+.logo {
+	text-align: center;
+}
+/* Mygel */
+.history-overlay {
+	height: 1100px;
+	overflow-y: inherit;
+/*	position: inherit;
+*/}
+
+#history-overlay-container {
+	z-index: 22;
+	position: relative;
+}
+
+.hideHistory {
+	display: none;
+}
+
+.dispayHistory {
+	display: block;
+}
+
+.noUpperCase {
+	text-transform: none
+}
+
+.noUpperCase:hover {
+	text-decoration: underline;
+}

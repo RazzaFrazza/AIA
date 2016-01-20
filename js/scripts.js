@@ -78,7 +78,7 @@ $('document').ready(function(){
 	});	
 
 
-	$('#closeMe, .close-button, .small-circle').click(function(e){
+	$('#closeMe, .close-button, .small-circle, .about').click(function(e){
 		$('#what-are-aia-contract-documents').css('display', 'block');
 	});
 
@@ -104,6 +104,7 @@ $('document').ready(function(){
 			$(window).scroll(function() {
 				if( $(window).scrollTop() > self.DOM.$svgBox.offset().top - 100 ) {
 					self.start();
+					$('svg').addClass('animated pulse');
 				}
 			});
 		}
