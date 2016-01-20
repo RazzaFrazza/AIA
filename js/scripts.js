@@ -43,9 +43,6 @@ $('document').ready(function(){
 
 
 
-
-
-
 	$('.history-container .history, .history-menu-link').click(function(e){
 
 		//$('body').addClass('fixed');
@@ -63,7 +60,7 @@ $('document').ready(function(){
 		}, 300);
 	});
 
-	$('.history-overlay .history, .close-button').click(function(){
+	$('.history-overlay .history, .close-button, .about').click(function(){
 		
 		//$('body').removeClass('fixed');
 		// $('.inner-wrap').css('display', 'block');
@@ -77,7 +74,7 @@ $('document').ready(function(){
 
 
 
-	$('#openMe, .small-circle-button').click(function(e){
+	$('#openMe, .small-circle-button, .history-menu-link').click(function(e){
 		$('#what-are-aia-contract-documents').css('display', 'none');
 		$('#history-menu-link-history').css('display', 'none')
 	});	
@@ -87,11 +84,6 @@ $('document').ready(function(){
 		$('#what-are-aia-contract-documents').css('display', 'block');
 	});
 
-
-	$('.history-menu-link').click(function(e){
-		$('#history-overlay-container').css('display', 'none');
-		$('#what-are-aia-contract-documents').css('display', 'block');
-	});	
 
 
 
