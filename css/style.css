@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+;;/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -515,7 +515,7 @@ svg.small-circle-button:hover .small-circle{
 .who-uses h2{
 	color: #fff;
 	margin-bottom: 80px;
-	margin-top: 0px !important;
+	margin-top: 40px;
 }
 
 .who-uses img{
@@ -534,7 +534,7 @@ svg.small-circle-button:hover .small-circle{
 	color: #fff;
 	position: relative;
 	top: -8px;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .who-uses .two-column:hover svg.small-circle-button .small-circle{
@@ -608,8 +608,8 @@ svg.small-circle-button:hover .small-circle{
 .contract-families h2{
 	padding: 0 70px;
 	margin-bottom: 50px;
-	margin-top: 0px !important;
-	line-height: 46px;
+	margin-top: 40px;
+	line-height: 24px;
 }
 
 .contract-families .flip-container, .contract-families .flip-container .front, .contract-families .flip-container .back{
@@ -739,11 +739,10 @@ svg.small-circle-button:hover .small-circle{
 }
 
 .popular-documents h2{
-	margin-top: 0px !important;
-	padding: 0 70px;
+	margin-top: 40px;
+	margin-bottom: 50px;
 	color: #fff;
 	text-align: center;
-
 }
 
 .popular-documents .columns{
@@ -852,7 +851,7 @@ svg.small-circle-button:hover .small-circle{
 	visibility: visible;
 	position: relative;
 	top: -8px;
-	font-size: 18px;
+	font-size: 14px;
 	max-width: 200px;
 	color: #fff;
 }
@@ -862,7 +861,6 @@ svg.small-circle-button:hover .small-circle{
 	visibility: visible;
 	position: relative;
 	top: 5px;
-	font-size: 18px;
 	max-width: 250px;
 	display: inline-block;
 }
@@ -875,7 +873,7 @@ svg.small-circle-button:hover .small-circle{
   display: block;
   margin-top: 14px;
   text-transform: uppercase;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .footer {
@@ -889,13 +887,13 @@ svg.small-circle-button:hover .small-circle{
 .footer h2{
 	color: #000;
 	text-align: center;
-	font-size: 40px;
+	font-size: 20px;
 }
 
 
 .footer a{
 	color: #000;
-	font-size: 18px;
+	font-size: 14px;
 }
 .footer .inner-wrap{
 	max-width: 1190px;
@@ -978,7 +976,7 @@ svg.small-circle-button:hover .small-circle{
 
 .overlay h3{
 	color: #000;
-	font-size: 22px;
+	font-size: 15px;
 	text-transform: none;
 	font-family: 'architypebold', sans-serif;
 	margin: 20px 0 6px;
@@ -1047,7 +1045,7 @@ svg.small-circle-button:hover .small-circle{
 	}
 
 	h1{
-		font-size: 40px;
+		font-size: 38px;
 	}
 
 	.second img{
@@ -1093,7 +1091,21 @@ svg.small-circle-button:hover .small-circle{
 	.who-uses {
 	  padding: 90px 0 100px;
 	}
+	
 
+	.who-uses h2{
+		color: #fff;
+		margin-bottom: 80px;
+		margin-top: 0px !important;
+	}
+	
+	.contract-families h2{
+		padding: 0 70px;
+		margin-bottom: 50px;
+		margin-top: 0px !important;
+		line-height: 46px;
+	}
+	
 	.two-column {
 	  display: inline-block;
 	  margin-bottom: 150px;
@@ -1121,6 +1133,7 @@ svg.small-circle-button:hover .small-circle{
 
 	.popular-documents h2{
 		margin-bottom: 115px;
+		margin-top: 0px !important;
 	}
 
 	.popular-documents .two-col{
@@ -1159,6 +1172,7 @@ svg.small-circle-button:hover .small-circle{
 		color: #000;
 		text-align: center;
 		margin-bottom: 100px;
+		font-size: 40px;
 	}
 
 	.footer .two-col .button{
@@ -1194,6 +1208,10 @@ svg.small-circle-button:hover .small-circle{
 	  max-width: none;
 	  text-align: center;
 	  width: 100%;
+	}
+
+	.overlay h3{
+		font-size: 22px;
 	}
 
 }
@@ -1408,6 +1426,23 @@ svg.small-circle-button:hover .small-circle{
 		.contract-families .link.two-lines.wider{
 			max-width: none;
 		}
+				
+		.who-uses a .link{
+			font-size: 18px;
+		}
+	
+		.popular-documents .link{
+			font-size: 18px;
+		}
+	
+	.popular-documents .link .second-line {
+  			line-height: 22px;
+		}
+
+	.footer a{
+		color: #000;
+		font-size: 18px;
+		}
 }
 /* START OF: animate city building SVG*/
 /* add a special .animation-draw-city-build-shapes to the  <body> tag once the SVG is in the viewport */
@@ -1583,7 +1618,6 @@ svg.small-circle-button:hover .small-circle{
 .logo {
 	text-align: center;
 }
-/* Mygel */
 .history-overlay {
 	height: 1100px;
 	overflow-y: inherit;
@@ -1610,3 +1644,52 @@ svg.small-circle-button:hover .small-circle{
 .noUpperCase:hover {
 	text-decoration: underline;
 }
+
+.centerSpaceImage {
+	    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.ownersImg {
+    background-image: url('../img/owners.svg');
+    height: 301px;
+    width: 215px;
+}
+
+.ownersImg:hover {
+	    background-image: url('../img/owners2.svg');
+	    transition-delay: 0.1s;  
+}
+
+.contractorsImg {
+   background-image: url('../img/contractors.svg');
+    height: 415px;
+    width: 200px;
+}
+
+.contractorsImg:hover {
+	  background-image: url('../img/contractors2.svg');
+	  transition-delay: 0.1s;  
+}
+
+.attorneysImg {
+    background-image: url('../img/attorneys.svg');
+    height: 418px;
+    width: 150px;
+}
+.attorneysImg:hover {
+	    background-image: url('../img/attorneys2.svg');
+	    transition-delay: 0.1s;  
+}
+
+.architectsImg {
+   background-image: url('../img/architects.svg');
+    height: 418px;
+    width: 8.5em;
+}
+.architectsImg:hover {
+	background-image: url('../img/architects2.svg');
+	transition-delay: 0.1s;  
+}
+
+

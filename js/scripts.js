@@ -83,7 +83,7 @@ $('document').ready(function(){
 	});
 
 
-
+var svg=document.getElementById("peopleSVG");
 
 
 
@@ -97,6 +97,7 @@ $('document').ready(function(){
 			$svgBox: $('.js-city-building-block')
 		},
 		start: function () {
+			     $(svg).addClass('animated pulse');
 			$('body').addClass('animation-draw-city-build-shapes');
 		},
 		bind: function () {
@@ -104,7 +105,6 @@ $('document').ready(function(){
 			$(window).scroll(function() {
 				if( $(window).scrollTop() > self.DOM.$svgBox.offset().top - 100 ) {
 					self.start();
-					$('svg').addClass('animated pulse');
 				}
 			});
 		}

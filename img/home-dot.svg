@@ -1,8 +1,1 @@
-<svg class="dot" version="1.1"
-         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-         x="0px" y="0px" width="26px" height="26px" viewBox="0 0 26 26" enable-background="new 0 0 26 26" xml:space="preserve">
-    <defs>
-    </defs>
-    <path class="home-button" d="M13,0C5.8,0,0,5.8,0,13s5.8,13,13,13c7.2,0,13-5.8,13-13S20.2,0,13,0z M12.9,20.4L6.5,8.8c3,0,13,0,13,0
-        L12.9,20.4z"/>
-    </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" enable-background="new 0 0 26 26"><path d="m13 0c-7.2 0-13 5.8-13 13s5.8 13 13 13c7.2 0 13-5.8 13-13s-5.8-13-13-13m-.1 20.4l-6.4-11.6c3 0 13 0 13 0l-6.6 11.6"/></svg>
