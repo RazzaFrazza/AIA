@@ -401,6 +401,7 @@ h2{
 	margin: 0 auto;
 
     background-color: #A0BCC0; /*fill the SVG's bg with color preventing doubling white blots*/
+    height: 600px;
 }
 
 .what{
@@ -1186,7 +1187,7 @@ svg.small-circle-button:hover .small-circle{
 	}
 
 	.nav-wrap {
-	  left: 10px;
+	  left: -22px;
 	  position: fixed;
 	  top: 200px;
 	  display: block;
@@ -1692,4 +1693,28 @@ svg.small-circle-button:hover .small-circle{
 	transition-delay: 0.1s;  
 }
 
+.ie9 img[src*=".svg"] {
+  width: 100%; 
+}
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 42em) { 
+.logo {
+margin-top: 3em;
+}
+
+.second svg {
+	height: 300px;
+}
+
+.construction-manager-as-contractor .back {
+	height: 310px !important;
+	    padding-right: 18%;
+}
+
+}
