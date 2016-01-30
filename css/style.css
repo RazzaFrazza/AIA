@@ -1718,3 +1718,52 @@ margin-top: 3em;
 }
 
 }
+
+@-moz-document url-prefix() {
+
+
+
+.ownersImg {
+    background-image: url('../img/owners.png');
+    height: 301px;
+    width: 215px;
+}
+
+.ownersImg:hover {
+	    background-image: url('../img/owners2.png');
+	    transition-delay: 0.1s;  
+}
+
+.contractorsImg {
+   background-image: url('../img/contractors.png');
+    height: 415px;
+    width: 200px;
+}
+
+.contractorsImg:hover {
+	  background-image: url('../img/contractors2.png');
+	  transition-delay: 0.1s;  
+}
+
+.attorneysImg {
+    background-image: url('../img/attorneys.png');
+    height: 418px;
+    width: 150px;
+}
+.attorneysImg:hover {
+	    background-image: url('../img/attorneys2.png');
+	    transition-delay: 0.1s;  
+}
+
+.architectsImg {
+   background-image: url('../img/architects.png');
+    height: 418px;
+    width: 8.5em;
+}
+.architectsImg:hover {
+	background-image: url('../img/architects2.png');
+	transition-delay: 0.1s;  
+}
+
+
+}
