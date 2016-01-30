@@ -254,7 +254,12 @@ h2{
 }
 
 .logo{
-	width: 227px;
+	width:227px;
+	margin: 0 auto;
+}
+
+.logo.footer{
+	width:100%;
 	margin: 0 auto;
 }
 
@@ -405,7 +410,7 @@ h2{
 }
 
 .what{
-	padding: 60px 0 20px;
+	padding: 40px 0 20px;
 }
 
 .history-overlay .what{
@@ -593,7 +598,7 @@ svg.small-circle-button:hover .small-circle{
 .contract-families .overlay h3{
 	font-size: 15px;
 	line-height: normal;
-	max-width: 150px;
+	max-width: 200px;
 }
 
 .contract-families .overlay.flippy > p {
@@ -899,6 +904,7 @@ svg.small-circle-button:hover .small-circle{
 .footer .inner-wrap{
 	max-width: 1190px;
 	margin: 0 auto;
+	padding: 0px 50px;
 }
 
 .footer .two-col{
@@ -1022,7 +1028,7 @@ svg.small-circle-button:hover .small-circle{
 }
 
 
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 839px){
 	.top{
 		padding: 190px 0 384px;
 	}
@@ -1067,7 +1073,7 @@ svg.small-circle-button:hover .small-circle{
 	}
 
 	.what {
-	  padding: 90px 7% 20px;
+	  padding: 50px 7% 50px;
 	}
 
 	.history-overlay .what{
@@ -1077,7 +1083,7 @@ svg.small-circle-button:hover .small-circle{
 	.what p {
 	  font-size: 30px;
 	  line-height: 45px;
-	  margin-bottom: 50px;
+	  margin-bottom: 40px;
 	}
 
 	a.history .link {
@@ -1217,7 +1223,7 @@ svg.small-circle-button:hover .small-circle{
 
 }
 
-@media only screen and (min-width: 830px){
+@media only screen and (min-width: 857px){
 
 #home{
 	background: url(../img/top.png) no-repeat fixed top center / cover;
@@ -1620,7 +1626,7 @@ svg.small-circle-button:hover .small-circle{
 	text-align: center;
 }
 .history-overlay {
-	height: 1100px;
+	height: 400px;
 	overflow-y: inherit;
 /*	position: inherit;
 */}
@@ -1628,8 +1634,27 @@ svg.small-circle-button:hover .small-circle{
 #history-overlay-container {
 	z-index: 22;
 	position: relative;
+	min-height: 1150px;
 }
 
+@media only screen and (min-width: 839px){
+#history-overlay-container {
+	
+    z-index: 22;
+
+    position: relative;
+	
+    min-height: 1300px;}
+}
+@media only screen and (max-width: 838px){
+#history-overlay-container {
+	
+    z-index: 22;
+
+    position: relative;
+	
+    min-height: 900px;}
+}
 .hideHistory {
 	display: none;
 }
@@ -1639,11 +1664,13 @@ svg.small-circle-button:hover .small-circle{
 }
 
 .noUpperCase {
-	text-transform: none
+	text-transform: none;
+	font-family: 'architypelight', sans-serif !important;
 }
 
 .noUpperCase:hover {
 	text-decoration: underline;
+	font-family: 'architypelight', sans-serif !important;
 }
 
 .centerSpaceImage {
@@ -1714,7 +1741,14 @@ margin-top: 3em;
 
 .construction-manager-as-contractor .back {
 	height: 310px !important;
-	    padding-right: 18%;
+	    padding-right: 0%;
+}
+
+}
+
+@media only screen and (max-device-width : 375px) {
+.inner-wrap {
+padding: 0%;
 }
 
 }
